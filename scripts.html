@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 10px; background-color: antiquewhite;
+        }
+        h1{
+            text-align: center;
+        }
+
+
+    </style>
+
+    <script>
+        function getamt()
+        {
+            var s=document.getElementById("mb");
+            var sr=s.options[s.selectedIndex].text;
+
+            var sv=s.options[s.selectedIndex].value;
+            var no=document.getElementById("txtitem").value;
+            var tot=parseInt(no)*parseInt(sv);
+            document.getElementById("txtamt").value=tot;
+
+
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>WholeSale Mobile Showroom </h1>
+    <form>
+        <div>
+               <label>Select the mobile brand</label>
+            <select id="mb">
+                <option>--Select--</option>
+                <option value="150000">iphone</option>
+                <option value="25000">oppo</option>
+                <option value="19000">vivo</option>
+             </select>
+          
+          </div>
+        <div>
+            <label> Enter no of items</label>
+            <input type="number" id="txtitem"/>
+        </div>
+
+        <div>
+            <label>Total amount</label>
+            <input type="text" id="txtamt" readonly/>
+        </div>
+
+        <div>
+             <input type="button" value="Get total amount" onclick="getamt()"/>
+        </div>
+    </form>
+    
+</body>
+</html>
