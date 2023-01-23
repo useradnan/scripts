@@ -7,58 +7,55 @@
     <title>Document</title>
     <style>
         div{
-            padding: 10px; background-color: antiquewhite;
+            padding: 10px; margin:5px;
+            background-color: aqua;
+            
         }
         h1{
             text-align: center;
+             color: brown;
         }
-
-
     </style>
-
     <script>
-        function getamt()
-        {
-            var s=document.getElementById("mb");
-            var sr=s.options[s.selectedIndex].text;
-
-            var sv=s.options[s.selectedIndex].value;
-            var no=document.getElementById("txtitem").value;
-            var tot=parseInt(no)*parseInt(sv);
+        function ls(){
+            var v=document.getElementById("bk");
+            var vs=v.options[v.selectedIndex].text;
+            var s=v.options[v.selectedIndex].value;
+            var z=document.getElementById("nu").value;
+            var tot=s*z;
             document.getElementById("txtamt").value=tot;
 
 
         }
     </script>
-    
 </head>
 <body>
-    <h1>WholeSale Mobile Showroom </h1>
+    <h1> new bike showrom</h1>
     <form>
         <div>
-               <label>Select the mobile brand</label>
-            <select id="mb">
-                <option>--Select--</option>
-                <option value="150000">iphone</option>
-                <option value="25000">oppo</option>
-                <option value="19000">vivo</option>
-             </select>
-          
-          </div>
-        <div>
-            <label> Enter no of items</label>
-            <input type="number" id="txtitem"/>
-        </div>
+            <label> bike showroom</label>
+            <select id="bk">
+                <option>--select--</option>
+                <option value="200000">ns</option>
+                <option value="150000">bullet</option>
+                <option value="100000">activa</option>
 
-        <div>
-            <label>Total amount</label>
-            <input type="text" id="txtamt" readonly/>
+            </select>
         </div>
-
         <div>
-             <input type="button" value="Get total amount" onclick="getamt()"/>
+            <label>enter no of items</label>
+            <input type="number" id="nu"/>
+
+
+        </div>
+        <div>
+            <label> total amount</label>
+            <input type="text" id="txtamt"/>
+        </div>
+        <div>
+            <input type="button" value="getamt" onclick="ls()" readonly/>
+
         </div>
     </form>
-    
 </body>
 </html>
